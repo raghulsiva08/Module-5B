@@ -20,36 +20,26 @@ To create and display a **DataFrame** using the **Pandas** library in Python fro
 ~~~
 import pandas as pd 
 
-student_data1 = pd.DataFrame({ 
-'student_id': ['S1', 'S2', 'S3', 'S4', 'S5'], 
+import numpy as np 
 
-'name': ['Danniella Fenton', 'Ryder Storey', 'Bryce Jensen', 'Ed Bernal', 'Kwame Morin'],  
+exam_data  = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 
+'Kevin', 'Jonas'], 
 
-'marks': [200, 210, 190, 222, 199]}) 
+'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 
 
-student_data2 = pd.DataFrame({ 
-'student_id': ['S4', 'S5', 'S6', 'S7', 'S8'], 
+'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 
 
-'name': ['Scarlette Fisher', 'Carla Williamson', 'Dante Morse', 'Kaiser William', 'Madeeha Preston'], 
+'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']} 
 
-'marks': [201, 200, 198, 219, 201]}) 
+labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'] 
 
-print("Original DataFrames:") 
+df = pd.DataFrame(exam_data , index=labels) 
 
-print(student_data1)
-
-print("-------------------------------------") 
-
-print(student_data2) 
-
-print("\nJoin the said two dataframes along rows:") 
-
-result_data = pd.concat([student_data1, student_data2]) 
-
-print(result_data)
+print(df)
 ~~~
 ## Output
-<img width="713" height="909" alt="530385999-b75da311-acc8-4a7f-8d4d-d03f6c1ffbec" src="https://github.com/user-attachments/assets/48caef18-4db6-4123-b179-29e5f2e2463d" />
+<img width="843" height="404" alt="530385771-9968b772-7e96-42c2-a533-d0ec4cef70f2" src="https://github.com/user-attachments/assets/396fec9c-5fb6-4cd0-a100-01ef94150325" />
+
 
 ## Result
 Thus, the Python program has been successfully created and executed successfully to join the two DataFrames row-wise using pd.concat() and all records from both DataFrames were included in the final output .
